@@ -1,5 +1,6 @@
-<!DOCTYPE >
+<!DOCTYPE>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,14 +18,52 @@
             align-items: center;
             justify-content: center;
         }
-        .platform-nav { background: 6f42c1; color: rgb(11, 11, 11); }
-        .course-sidebar { background: 495057; color: rgb(21, 20, 20); min-height: 500px; }
-        .video-player { background: 343a40; color: rgb(12, 12, 12); min-height: 400px; }
-        .course-materials { background: 17a2b8; color: rgb(2, 2, 2); min-height: 400px; }
-        .discussion { background: 28a745; color: rgb(17, 17, 17); min-height: 300px; }
-        .related-course { background: fd7e14; color: rgb(11, 10, 10); min-height: 200px; }
+
+        .platform-nav {
+            background: 6f42c1;
+            color: rgb(11, 11, 11);
+            background-color: tan;
+        }
+
+        .course-sidebar {
+            background-color: whitesmoke;
+    /* display: flex
+; */
+    min-height: 400px;
+            /* display: flex
+; */
+            min-height: 400px;
+        }
+
+        .video-player {
+            background: 343a40;
+            color: rgb(12, 12, 12);
+            min-height: 400px;
+            background-color: whitesmoke;
+        }
+
+        .course-materials {
+            background: 17a2b8;
+            color: rgb(2, 2, 2);
+            min-height: 400px;
+            background-color: whitesmoke;
+        }
+
+        .discussion {
+            background: 28a745;
+            color: rgb(17, 17, 17);
+            min-height: 300px;
+            background-color: whitesmoke;
+        }
+
+        .related-course {
+            background: fd7e14;
+            color: rgb(11, 10, 10);
+            min-height: 200px;
+        }
     </style>
 </head>
+
 <body>
     <div class="container-fluid">
         <!-- Platform Navigation -->
@@ -35,7 +74,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Main Learning Interface -->
         <div class="row">
             <!-- Course Sidebar -->
@@ -53,7 +92,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Video Player -->
             <div class="col-6">
                 <div class="demo-box video-player">
@@ -64,7 +103,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Course Materials -->
             <div class="col-3">
                 <div class="demo-box course-materials">
@@ -80,7 +119,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Discussion Section -->
         <div class="row">
             <!-- YOUR TASK: Center the discussion section using offset -->
@@ -94,14 +133,14 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Related Courses -->
         <div class="row">
             <div class="col-12 my-3">
                 <h2 class="text-center">Related Courses</h2>
             </div>
         </div>
-        <div class="row">
+        <div class="row" style="background-color: grey">
             <!-- YOUR TASK: Create 4 related course cards, 3 columns each -->
             <div class="col-3">
                 <div class="demo-box related-course">
@@ -112,7 +151,7 @@
                 </div>
             </div>
             <!-- Add 3 more related courses -->
-             <div class="col-3">
+            <div class="col-3">
                 <div class="demo-box related-course">
                     <div>
                         <h5>Iphone 16</h5>
@@ -139,4 +178,5 @@
         </div>
     </div>
 </body>
+
 </html>
