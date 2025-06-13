@@ -35,6 +35,6 @@ const arr=[123,"Rajesh",{
 }]
 console.table(arr);
 console.table(arr[2]);
-var ab="Read";
+const ab="Read";
 ab="Write";
-console.log(ab)
+console.log(ab)//Reference error;
