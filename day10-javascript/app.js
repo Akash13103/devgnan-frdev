@@ -32,6 +32,9 @@ const arr=[123,"Rajesh",{
     name:'Akash',
     ID:1,
     api:[324,"Papa","KS1T",{name:"Raviteja",ID:2}]
-}];
+}]
 console.table(arr);
 console.table(arr[2]);
+var ab="Read";
+ab="Write";
+console.log(ab)
