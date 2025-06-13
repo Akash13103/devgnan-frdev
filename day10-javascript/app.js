@@ -23,3 +23,15 @@ function manMade(){
 console.log(manMade.name1);//returns undefined due to block scope variable 'name1' using let;
 console.log(manMade());
 manMade();
+const obj={
+    name:'Akash',
+    ID:1
+};
+console.log(obj.ID);
+const arr=[123,"Rajesh",{
+    name:'Akash',
+    ID:1,
+    api:[324,"Papa","KS1T",{name:"Raviteja",ID:2}]
+}];
+console.table(arr);
+console.table(arr[2]);
