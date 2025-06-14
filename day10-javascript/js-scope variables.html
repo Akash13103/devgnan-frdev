@@ -1,0 +1,41 @@
+<html>
+
+<body>
+    <h1>Counter Practice</h1>
+    <p>Count: <span id="count">0</span></p>
+    <button onclick="increment()">+1</button>
+    <button onclick="decrement()">-1</button>
+    <button onclick="reset()">Reset</button>
+    <script>
+         // YOUR TASK: Complete this counter
+        // Use the right variable declarations (let, const, var)
+        
+        let count = 0;                    // Will this change?
+        const MAX_COUNT = 10;               // Will this change?
+        const MIN_COUNT = 0;                // Will this change?
+
+        function increment() {
+            if(count<MAX_COUNT){
+                count=count+1;
+                document.getElementById('count').textContent = count;
+            }
+
+            
+        }
+
+        function decrement() {
+            if(count>MIN_COUNT){
+                count=count-1;
+                document.getElementById('count').textContent = count;
+            }
+        }
+
+        function reset() {
+            count=0;
+
+            document.getElementById('count').textContent = count;
+        }
+    </script>
+</body>
+
+</html>
