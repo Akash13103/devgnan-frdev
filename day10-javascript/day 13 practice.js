@@ -64,13 +64,13 @@ const arrData = [{
 arrayDecrement()//calling this fucntion displays the array values in descending order
 arrayIncrement()//calling this fucntion displays the array values in ascending order
 function arrayDecrement() {
-    console.log("Bottom to top")
+    console.log("Ending to Starting")
     for (let i = arrData.length-1; i >= 0; i--) {
         console.log("Index:",i,":",arrData[i])
     }
 }
 function arrayIncrement(){
-    console.log("Top to Bottom")
+    console.log("Starting to Ending")
     for (let i = 0; i < arrData.length; i++) {
         console.log("Index:",i,":",arrData[i])
     }
