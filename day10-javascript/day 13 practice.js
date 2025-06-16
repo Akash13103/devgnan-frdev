@@ -66,12 +66,12 @@ arrayIncrement()//calling this fucntion displays the array values in ascending o
 function arrayDecrement() {
     console.log("Bottom to top")
     for (let i = arrData.length-1; i >= 0; i--) {
-        console.log("Index:",i,arrData[i])
+        console.log("Index:",i,":",arrData[i])
     }
 }
 function arrayIncrement(){
     console.log("Top to Bottom")
     for (let i = 0; i < arrData.length; i++) {
-        console.log("Index:",i,arrData[i])
+        console.log("Index:",i,":",arrData[i])
     }
 }
