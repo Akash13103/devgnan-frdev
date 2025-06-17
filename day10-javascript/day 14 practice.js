@@ -20,4 +20,8 @@ const arrData = [{
 const me=arrData.map(function callBack(arrData,index,n){
     return arrData.name+" "+index
 })
-console.log(me)
+console.log(me)//it creates a new array
+const you=arrData.forEach(function callBack(arrData,index,n){
+    return arrData.name+" "+index
+})
+console.log(you)//it defaulty creates a new undefined value (always)
