@@ -1,0 +1,142 @@
+Assignment 4: Method Comparison Challenge (30 minutes)
+
+Task: Solve the same problems using for loop, forEach, and map
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Method Comparison Challenge</title>
+</head>
+
+<body>
+    <h1>for vs forEach vs map Challenge</h1>
+
+    <script>
+        // Test data: Student grades
+        let students = [
+            { name: "Alice", score: 85 },
+            { name: "Bob", score: 92 },
+            { name: "Charlie", score: 78 },
+            { name: "Diana", score: 96 },
+            { name: "Eve", score: 88 }
+        ];
+        // Using for loop
+        // YOUR TASK: Use for loop to extract all names
+        // CHALLENGE 1: Get all student names
+        let namesFor = [];
+        for (let i = 0; i < students.length; i++) {
+            console.log(students[i].name)
+            namesFor.push(students[i].name)
+        }
+        console.log(namesFor)
+        // Using forEach
+        let namesForEach = [];
+        let result1 = students.forEach(function (students, index) {
+            return namesForEach.push(students.name)
+        })
+        console.log(namesForEach)
+
+        // YOUR TASK: Use forEach to extract all names
+        // Using map (best choice for this task)
+        let namesMap;
+        // YOUR TASK: Use map to extract all names
+
+        namesMap = students.map(function (students, index) {
+            return students.name
+        });
+        console.log(namesMap)
+
+        // CHALLENGE 2: Add 5 bonus points to each score
+        console.log("\n=== CHALLENGE 2: Add 5 bonus points ===");
+        //Using for loop
+        let bonusFor = [];
+        for (let i = 0; i < students.length; i++) {
+            bonusFor.push(students[i].score + 5)
+        }
+        // YOUR TASK: Create new array with score + 5 for each student
+
+        console.log("Using for loop:", bonusFor);
+
+        //Using forEach
+        let bonusForEach = [];
+        students.forEach(function (students, index) {
+            bonusForEach.push(students.score + 5)
+        })
+        // YOUR TASK: Create new array with score + 5 for each student
+
+        console.log("Using forEach:", bonusForEach);
+
+        // Using map (best choice for this task)
+        let bonusMap = students.map(function (students, index) {
+            return students.score + 5
+        })
+        // YOUR TASK: Create new array with score + 5 for each student
+        console.log("Using map:", bonusMap);
+
+        // CHALLENGE 3: Find the first student with score > 90
+        console.log("\n=== CHALLENGE 3: Find first score > 90 ===");
+        // Using for loop (best choice for this task - can break early)
+        let firstHighScorer = null;
+        for (let i = 0; i < students.length; i++) {
+            if (students[i].score > 90) {
+                firstHighScorer = students[i]
+                break;
+            }
+        }
+        // YOUR TASK: Find first student with score > 90, use break to exit early
+        console.log("Using for loop:", firstHighScorer);
+        // Using forEach (not ideal - cannot break early)
+        let firstHighScorerForEach = null;
+        flag = false
+        //YOUR TASK: Find first student with score > 90
+        // Note: forEach will check ALL students even after finding the first one
+        students.forEach(function (students, index) {
+            if (!flag && students.score > 90) {
+                firstHighScorerForEach = students.name + " " + students.score
+                flag = true
+            } s
+
+        })
+        console.log("Using forEach:", firstHighScorerForEach);
+        // CHALLENGE 4: Create grade letters (A, B, C, D, F)
+        console.log("\n=== CHALLENGE 4: Convert to letter grades ===");
+
+        function getGrade(score) {
+            if (score >= 90) return "A";
+            if (score >= 80) return "B";
+            if (score >= 70) return "C";
+            if (score >= 60) return "D";
+            return "F";
+        }
+
+        // Using for loop
+        let marks = [95, 82, 77, 65, 54]
+        let gradesFor = [];
+        for (let i = 0; i < marks.length; i++) {
+            gradesFor.push(getGrade(marks[i]))
+        }
+        // YOUR TASK: Create array of grade letters
+
+        console.log("Using for loop:", gradesFor);
+
+        // Using map (best choice for this task)
+        let gradesMap;
+        gradesMap = marks.map(function (score, index) {
+            return getGrade(score)
+        })
+        // YOUR TASK: Create array of gradeletters
+
+        console.log("Using map:", gradesMap);
+
+        // REFLECTION: Which method felt most natural for each challenge?
+        console.log("\n=== REFLECTION ===");
+        console.log("Challenge 1 (extract data): map is clearest");
+        console.log("Challenge 2 (transform data): map is clearest");
+        console.log("Challenge 3 (find first): for loop is most efficient");
+        console.log("Challenge 4 (transform data): map is clearest");
+    </script>
+
+</body>
+
+</html>

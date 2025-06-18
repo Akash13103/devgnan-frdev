@@ -1,0 +1,66 @@
+Assignment 1: Understanding Callbacks (15 minutes)
+
+Task: Create your own callback functions
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Callback Practice</title>
+</head>
+
+<body>
+    <h1>Callback Functions Practice</h1>
+
+    <script>
+
+        // 1. Create a function that takes a number and a callback
+        function processNumber(number, callback) {
+            console.log("Processing number:", number);
+            console.log(callback(number))
+        }
+
+
+        // 2. Create callback functions
+        function doubleNumber(num) {
+            return num * 2
+        }
+
+        function squareNumber(num) {
+            return num * num
+        }
+
+        function addTen(num) {
+            return num + 10
+        }
+        processNumber(5, doubleNumber);  // Should log: "Processing number: 5" then result
+        processNumber(3, squareNumber);  // Should log: "Processing number: 3" then result
+        processNumber(7, addTen);         // Should log: "Processing number: 7" then result
+
+        // 4. Create a function that takes an array and callback
+        function processArray(array, callback) {
+            console.log("Processing array:", array);
+            let results = [];
+            for (let i = 0; i < array.length; i++) {
+                let result = callback(array[i], i);
+                results.push(result)
+            }
+            return results
+            // YOUR TASK: Use a for loop to call callback on each element
+            // Push each result into the results array
+            // Return the results array
+        }
+        function doubleNumber(num, index) {
+            return num * 2
+        }
+
+        // Test processArray
+        let numbers = [1, 2, 3, 4];
+        let doubled = processArray(numbers, doubleNumber);
+        console.log("Doubled:", doubled);
+        // Should be [2, 4, 6, 8]
+    </script>
+
+</body>
+
+</html>

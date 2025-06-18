@@ -1,0 +1,69 @@
+Assignment 3: Implement Your Own map (25 minutes)
+
+Task: Create your own version of map to understand how it works
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom map</title>
+</head>
+<body>
+    <h1>Implement Your Own map</h1>
+    
+    <script>
+        // YOUR TASK: Implement your own map function
+
+        function myMap(array, callback) {
+            // Create a new empty array
+            // Use a for loop to call the callback for each element
+            // Push the returned value from callback into the new array
+            // Return the new array
+        }
+
+        // Test data
+        let numbers = [1, 2, 3, 4, 5];
+        let names = ["alice", "bob", "charlie"];
+        let temperatures = [0, 100, 32, 212];
+
+        // Test 1: Double numbers
+        console.log("Test 1: Double numbers");
+        let doubled = myMap(numbers, function(num) {
+            return num * 2;
+        });
+        console.log("Original:", numbers);  // Should be unchanged
+        console.log("Doubled:", doubled);   // Should be [2, 4, 6, 8, 10]
+
+        // Test 2: Capitalize names
+        console.log("\nTest 2: Capitalize names");
+        let capitalized = myMap(names, function(name) {
+            return name.toUpperCase();
+        });
+        console.log("Original:", names);        // Should be unchanged
+        console.log("Capitalized:", capitalized); // Should be ["ALICE", "BOB", "CHARLIE"]
+
+        // Test 3: Convert Celsius to Fahrenheit
+        console.log("\nTest 3: Celsius to Fahrenheit");
+        let fahrenheit = myMap(temperatures, function(celsius) {
+            return (celsius * 9/5) + 32;
+        });
+        console.log("Celsius:", temperatures);
+        console.log("Fahrenheit:", fahrenheit);
+
+        // Test 4: Compare with built-in map
+        console.log("\nTest 4: Compare with built-in map");
+
+        let myResult = myMap(numbers, function(num) {
+            return num * 3;
+        });
+
+        let builtInResult = numbers.map(function(num) {
+            return num * 3;
+        });
+
+        console.log("My map result:", myResult);
+        console.log("Built-in map result:", builtInResult);
+        // They should be identical!
+    </script>
+
+</body>
+</html>
