@@ -4,20 +4,25 @@ Task: Create your own version of map to understand how it works
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Custom map</title>
 </head>
+
 <body>
     <h1>Implement Your Own map</h1>
-    
+
     <script>
         // YOUR TASK: Implement your own map function
 
+        // YOUR TASK: Implement your own map function
         function myMap(array, callback) {
-            // Create a new empty array
-            // Use a for loop to call the callback for each element
-            // Push the returned value from callback into the new array
-            // Return the new array
+            let newArray = [];
+            // Create a new array to hold the results
+            for (let i = 0; i < array.length; i++) {
+                newArray.push(callback(array[i]));
+            }
+            return newArray;
         }
 
         // Test data
@@ -27,7 +32,7 @@ Task: Create your own version of map to understand how it works
 
         // Test 1: Double numbers
         console.log("Test 1: Double numbers");
-        let doubled = myMap(numbers, function(num) {
+        let doubled = myMap(numbers, function (num) {
             return num * 2;
         });
         console.log("Original:", numbers);  // Should be unchanged
@@ -35,7 +40,7 @@ Task: Create your own version of map to understand how it works
 
         // Test 2: Capitalize names
         console.log("\nTest 2: Capitalize names");
-        let capitalized = myMap(names, function(name) {
+        let capitalized = myMap(names, function (name) {
             return name.toUpperCase();
         });
         console.log("Original:", names);        // Should be unchanged
@@ -43,8 +48,8 @@ Task: Create your own version of map to understand how it works
 
         // Test 3: Convert Celsius to Fahrenheit
         console.log("\nTest 3: Celsius to Fahrenheit");
-        let fahrenheit = myMap(temperatures, function(celsius) {
-            return (celsius * 9/5) + 32;
+        let fahrenheit = myMap(temperatures, function (celsius) {
+            return (celsius * 9 / 5) + 32;
         });
         console.log("Celsius:", temperatures);
         console.log("Fahrenheit:", fahrenheit);
@@ -52,11 +57,11 @@ Task: Create your own version of map to understand how it works
         // Test 4: Compare with built-in map
         console.log("\nTest 4: Compare with built-in map");
 
-        let myResult = myMap(numbers, function(num) {
+        let myResult = myMap(numbers, function (num) {
             return num * 3;
         });
 
-        let builtInResult = numbers.map(function(num) {
+        let builtInResult = numbers.map(function (num) {
             return num * 3;
         });
 
@@ -66,4 +71,5 @@ Task: Create your own version of map to understand how it works
     </script>
 
 </body>
+
 </html>

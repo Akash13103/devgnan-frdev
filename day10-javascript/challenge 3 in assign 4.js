@@ -26,7 +26,7 @@ students.forEach(function(students,index){
     if(!flag && students.score > 90){
         firstHighScorerForEach=students.name +" "+students.score
         flag=true
-    }s
+    }
     
 })
 console.log("Using forEach:", firstHighScorerForEach);

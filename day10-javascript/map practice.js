@@ -1,9 +1,11 @@
 // YOUR TASK: Implement your own map function
 function myMap(array, callback) {
-    // Create a new empty array
-    // Use a for loop to call the callback for each element
-    // Push the returned value from callback into the new array
-    // Return the new array
+    let newArray = [];
+    // Create a new array to hold the results
+    for (let i = 0; i < array.length; i++) {
+        newArray.push(callback(array[i]));
+    }
+    return newArray;
 }
 
 // Test data
