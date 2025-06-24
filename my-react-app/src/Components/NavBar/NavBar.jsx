@@ -4,7 +4,7 @@ function NavBar() {
     <>
         <div className="navbar">
         <div>Dashboard</div>
-        <div>Orders (`/orders`)</div>
+        <div>Orders</div>
         <div>Holdings</div>
         <div>Positions</div>
         <div>Funds </div>
