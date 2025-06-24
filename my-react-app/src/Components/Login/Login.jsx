@@ -14,7 +14,7 @@ function Login() {
     function handleLoginButton(){
         console.log(username,password)
         if(username === "Akash" && password === "123Kap"){
-            alert("User is valid")
+            alert("user is valid")
         }
         else{
             alert("User is invalid")
