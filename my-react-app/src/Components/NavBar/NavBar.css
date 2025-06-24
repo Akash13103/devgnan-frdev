@@ -1,3 +1,7 @@
 .navbar{
     background-color: whitesmoke;
+    display: flex;
+    gap:30px;
+    margin-bottom: 95%;
+    margin-left:70%;
 }
