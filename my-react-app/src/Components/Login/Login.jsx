@@ -1,9 +1,11 @@
 import React from "react"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 function Login() {
-    const [username, updateUserName] = useState("Akash")
+    const [userName, updateUserName] = useState("Akash")
     const [password, setPassword] = useState("")
+    const [successRes, setSuccessRes] = useState("")
     const navigate = useNavigate("");
     function handleUserName(event) {
         console.log("UserName:", event.target.value)
@@ -14,15 +16,18 @@ function Login() {
         setPassword(event.target.value)
     }
     function handleLoginButton() {
-        console.log(username, password)
+        console.log(userName, password)
         axios.post(
-            https://api.escuelajs.co/api/v1/auth/login
+            'https://api.escuelajs.co/api/v1/auth/login',
             {
-                "email": "Akash",
-                "password": "123Kap"
+                email: "john@mail.com",
+                password: "changeme",
             }
-        ).then()
-        if (username === "Akash" && password === "123Kap") {
+        ).then(function (positiveResponse, negativeResponse) {
+            console.log(positiveResponse, negativeResponse)
+            setSuccessRes(positiveResponse.data.access_token)
+        })
+        if (userName === "Akash" && password === "123Kap") {
             navigate('/dashboard')
         }
         else {
