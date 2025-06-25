@@ -8,6 +8,7 @@ function NavBar() {
         <div>Holdings</div>
         <div>Positions</div>
         <div>Funds </div>
+        <div>Bids</div>
       </div>
 
     </>

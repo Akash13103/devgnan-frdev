@@ -1,8 +1,10 @@
 import React from "react"
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 function Login() {
     const [username,updateUserName]=useState("Akash")
     const [password,setPassword]=useState("")
+    const navigate=useNavigate("");
     function handleUserName(event){
         console.log("UserName:",event.target.value)
         updateUserName(event.target.value)
@@ -14,7 +16,7 @@ function Login() {
     function handleLoginButton(){
         console.log(username,password)
         if(username === "Akash" && password === "123Kap"){
-            alert("user is valid")
+            navigate('/dashboard')
         }
         else{
             alert("User is invalid")
