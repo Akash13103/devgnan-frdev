@@ -1,0 +1,15 @@
+.navbar-container {
+  /*margin-bottom: 500px;
+  margin-left: 600px;*/
+  display: flex;
+  gap:20px;
+}
+h2 {
+  color: #fe835e;
+}
+h2:hover {
+  color: #fc3b01;
+}
+.content {
+  display: flex;
+}

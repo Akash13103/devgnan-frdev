@@ -6,7 +6,6 @@ import Login from "./Components/Login/Login.jsx";
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import NavBar from "./Components/NavBar/NavBar.jsx";
 import './Components/Login/Login.css';
-import './Components/NavBar/NavBar.css';
 import DashBoard from './Components/DashBoard/DashBoard.jsx';
 import Orders from './Components/Orders/Orders.jsx';
 import Holdings from './Components/Holdings/Holdings.jsx';
@@ -23,7 +22,6 @@ function App() {
     <>
         <Routes>
           <Route path="/" element={<Login/>}/>
-          <Route path="/home" element={<NavBar/>}/>
           <Route path="/dashboard" element={<DashBoard/>}/>
           <Route path="/orders" element={<Orders/>}/>
           <Route path="/holdings" element={<Holdings/>}/>
