@@ -15,24 +15,29 @@ function Login() {
         console.log("Password:", event.target.value)
         setPassword(event.target.value)
     }
-    function handleLoginButton() {
+    async function handleLoginButton() {
         console.log(userName, password)
-        axios.post(
-            'https://api.escuelajs.co/api/v1/auth/login',
-            {
-                email: "john@mail.com",
-                password: "changeme",
+        try {
+            const url = await axios.post(
+                'https://api.escuelajs.co/api/v1/auth/login',
+                {
+                    email: "john@mail.com",
+                    password: "changeme",
+                }
+            );
+            const Response = await url.data.access_token
+
+            if (userName === "john@mail.com" && password === "changeme") {
+                localStorage.setItem("Response", Response)
+                navigate('/dashboard')
             }
-        ).then(function (positiveResponse, negativeResponse) {
-            console.log(positiveResponse, negativeResponse)
-            setSuccessRes(positiveResponse.data.access_token)
-        })
-        if (userName === "Akash" && password === "123Kap") {
-            navigate('/dashboard')
+            else {
+                alert("User is invalid")
+            }
+        } catch (error) {
+            alert(error)
         }
-        else {
-            alert("User is invalid")
-        }
+
     }
     return (
         <>
