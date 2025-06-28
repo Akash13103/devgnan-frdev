@@ -45,9 +45,9 @@ function Login() {
                 <div className="login-card">
                     <h5>Login to Kite</h5>
                     <div className="input-field">Phone or UserID</div>
-                    <input type="text" onChange={handleUserName} placeholder="Phone or UserID" required />
+                    <input className="userInput"type="text" onChange={handleUserName} placeholder="Phone or UserID" required />
                     <div className="input-field">Password</div>
-                    <input type="password" onChange={handlePassword} placeholder="Password" required />
+                    <input className="userInput"type="password" onChange={handlePassword} placeholder="Password" required />
                     <button className="login-button" onClick={handleLoginButton}>Login</button>
                     <div className="forgot-link"><a href="*">Forgot User ID or password?</a></div>
                 </div>
