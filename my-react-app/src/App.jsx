@@ -20,8 +20,8 @@ function App() {
 
   return (
     <>
-        <Routes>
-          <Route path="/" element={<Login/>}/>
+        <Routes>         
+        <Route path="/" element={<Login/>}/>
           <Route path="/dashboard" element={<DashBoard/>}/>
           <Route path="/orders" element={<Orders/>}/>
           <Route path="/holdings" element={<Holdings/>}/>

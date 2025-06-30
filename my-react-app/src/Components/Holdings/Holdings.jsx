@@ -1,13 +1,32 @@
-import React, { Component } from 'react';
+import React from 'react';
+import BasicTable from '../Table/BasicTable';
 
-class Holdings extends Component {
-    render() {
-        return (
-            <div>
-                Holdings
-            </div>
-        );
-    }
+export default function Holdings() {
+    const holdingData=[{
+        "Instrument":"ADANIREET",
+        "avg_cost":2319.75,
+        "day_chg":0,
+        "net_chg":320
+    },{
+        "Instrument":"ADANIREET",
+        "avg_cost":2319.75,
+        "day_chg":0,
+        "net_chg":320
+    },{
+        "Instrument":"ADANIREET",
+        "avg_cost":2319.75,
+        "day_chg":0,
+        "net_chg":320
+    }]
+    holdingData.map(function(index,newArray){
+        return{
+            
+        }
+    })
+  return (
+    // Component content
+    <div>
+        <BasicTable />
+    </div>
+  );
 }
-
-export default Holdings;

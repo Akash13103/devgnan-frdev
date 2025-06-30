@@ -39,7 +39,7 @@ class DashBoard extends Component {
           </div>
         </div>
         <div className="content">
-          <div>Welcome to Kite Zerodha DashBoard</div>
+          <div></div>
         </div>
       </>
     );
