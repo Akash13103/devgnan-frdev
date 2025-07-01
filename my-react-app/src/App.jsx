@@ -53,6 +53,9 @@ function App() {
             <li>
               <Link to="/bids">Bids</Link>
             </li>
+             <li>
+              <Link to="/">Login</Link>
+            </li>
           </ul>
         </div>
       )}

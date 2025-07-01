@@ -53,6 +53,7 @@ const rows = [
     Invested: 43956.6,
   },
 ];
+localStorage.setItem("rows:",rows)
 
 export default function Holdings() {
   return (
