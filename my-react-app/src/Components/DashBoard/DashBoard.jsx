@@ -6,40 +6,32 @@ class DashBoard extends Component {
   render() {
     return (
       <>
-        <div className="navbar-container">
-          <div>
-            <Link to="/dashboard">
-              <h2>DashBoard</h2>
-            </Link>
-          </div>
-          <div>
-            <Link to="/orders">
-              <h2>Orders</h2>
-            </Link>
-          </div>
-          <div>
-            <Link to="/holdings">
-              <h2>Holdings</h2>
-            </Link>
-          </div>
-          <div>
-            <Link to="/positions">
-              <h2>Positions</h2>
-            </Link>
-          </div>
-          <div>
-            <Link to="/funds">
-              <h2>Funds</h2>
-            </Link>
-          </div>
-          <div>
-            <Link to="/bids">
-              <h2>Bids</h2>
-            </Link>
-          </div>
-        </div>
-        <div className="content">
-          <div></div>
+        <div>
+          <ul className="navbar-container">
+            <li>
+              <Link to="/dashboard">DashBoard</Link>
+            </li>
+
+            <li>
+              <Link to="/orders">Orders</Link>
+            </li>
+
+            <li>
+              <Link to="/holdings">Holdings</Link>
+            </li>
+
+            <li>
+              <Link to="/positions">Positions</Link>
+            </li>
+
+            <li>
+              <Link to="/funds">Funds</Link>
+            </li>
+
+            <li>
+              <Link to="/bids">Bids</Link>
+            </li>
+          </ul>
         </div>
       </>
     );

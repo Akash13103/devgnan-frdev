@@ -1,8 +1,10 @@
 .navbar-container {
-  /*margin-bottom: 500px;
-  margin-left: 600px;*/
+  list-style: none;
   display: flex;
-  gap:20px;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 h2 {
   color: #fe835e;
