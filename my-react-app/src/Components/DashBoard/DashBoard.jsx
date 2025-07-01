@@ -6,33 +6,7 @@ class DashBoard extends Component {
   render() {
     return (
       <>
-        <div>
-          <ul className="navbar-container">
-            <li>
-              <Link to="/dashboard">DashBoard</Link>
-            </li>
-
-            <li>
-              <Link to="/orders">Orders</Link>
-            </li>
-
-            <li>
-              <Link to="/holdings">Holdings</Link>
-            </li>
-
-            <li>
-              <Link to="/positions">Positions</Link>
-            </li>
-
-            <li>
-              <Link to="/funds">Funds</Link>
-            </li>
-
-            <li>
-              <Link to="/bids">Bids</Link>
-            </li>
-          </ul>
-        </div>
+       Dashboard
       </>
     );
   }
