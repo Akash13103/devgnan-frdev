@@ -59,7 +59,7 @@ export default function Holdings() {
   return (
     <>
       <Grid container spacing={2}>
-        <Grid class size={3}>
+        <Grid size={3}>
           <TableContainer component={Paper}>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
               <TableHead>
