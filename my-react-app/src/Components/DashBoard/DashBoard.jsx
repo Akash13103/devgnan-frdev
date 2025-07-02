@@ -10,6 +10,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import '../Holdings/Holdings.css'
 class DashBoard extends Component {
   render() {
     const rows = [
@@ -58,7 +59,7 @@ class DashBoard extends Component {
 ];
     return (
       <>
-        <Grid container spacing={2}>
+        <Grid container spacing={1}>
           <Grid size={3}>
             <TableContainer component={Paper}>
               <Table sx={{ minWidth: 650 }} aria-label="simple table">
@@ -77,8 +78,6 @@ class DashBoard extends Component {
                         {row.Instrument}
                       </TableCell>
                       <TableCell align="right">{row.Quantity}</TableCell>
-                      <TableCell align="right">{row.Avg_Cost}</TableCell>
-                      <TableCell align="right">{row.Invested}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>
