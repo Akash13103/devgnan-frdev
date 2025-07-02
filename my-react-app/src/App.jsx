@@ -30,8 +30,6 @@ function App() {
       {location.pathname === "/" ? null : (
         <div>
           <ul className="navbar-container">
-            <p>NIFTY</p>
-            <p>SENSEX</p>
             <li>
               <Link to="/dashboard">DashBoard</Link>
             </li>
