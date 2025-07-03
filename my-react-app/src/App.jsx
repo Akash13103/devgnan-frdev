@@ -19,6 +19,7 @@ import Holdings from "./Components/Holdings/Holdings.jsx";
 import Positions from "./Components/Positions/Positions.jsx";
 import Funds from "./Components/Funds/Funds.jsx";
 import Bids from "./Components/Bids/Bids.jsx";
+import ZerodhaLogin from "./Components/ZerodhaLogin/ZerodhaLogin.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -53,7 +54,7 @@ function App() {
             <li>
               <Link to="/bids">Bids</Link>
             </li>
-             <li>
+            <li>
               <Link to="/">Login</Link>
             </li>
           </ul>
@@ -68,6 +69,7 @@ function App() {
         <Route path="/positions" element={<Positions />} />
         <Route path="/funds" element={<Funds />} />
         <Route path="/bids" element={<Bids />} />
+        <Route path="/zerodha" element={<ZerodhaLogin />} />
       </Routes>
     </>
   );

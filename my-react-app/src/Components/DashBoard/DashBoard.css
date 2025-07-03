@@ -2,9 +2,7 @@
   list-style: none;
   display: flex;
   gap: 20px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  flex-direction: row;
+  justify-content: flex-end;
 }
 h2 {
   color: #fe835e;
@@ -15,3 +13,4 @@ h2:hover {
 .content {
   display: flex;
 }
+
