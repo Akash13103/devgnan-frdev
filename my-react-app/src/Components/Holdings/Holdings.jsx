@@ -7,7 +7,8 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import "../Holdings/Holdings.css";
-import Grid from "@mui/material/Grid";
+import SideBar from "../SideBar/SideBar";
+import Button from "@mui/material/Button";
 
 const rows = [
   {
@@ -53,67 +54,43 @@ const rows = [
     Invested: 43956.6,
   },
 ];
-localStorage.setItem("rows:",rows)
+localStorage.setItem("rows:", rows);
 
 export default function Holdings() {
   return (
     <>
-      <Grid container spacing={2}>
-        <Grid size={3}>
-          <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
-              <TableHead>
-                <TableRow>
-                  <TableCell>Instrument</TableCell>
+    <div className="content">
+      <SideBar/>
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell>Instrument</TableCell>
+                <TableCell align="right">Quantity</TableCell>
+                <TableCell align="right">Avg_Cost</TableCell>
+                <TableCell align="right">Invested</TableCell>
+                <TableCell>Apply If</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  key={row.Instrument}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.Instrument}
+                  </TableCell>
+                  <TableCell align="right">{row.Quantity}</TableCell>
+                  <TableCell align="right">{row.Avg_Cost}</TableCell>
+                  <TableCell align="right">{row.Invested}</TableCell>
+                  <TableCell><Button>Apply</Button></TableCell>
                 </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map((row) => (
-                  <TableRow
-                    key={row.Instrument}
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  >
-                    <TableCell component="th" scope="row">
-                      {row.Instrument}
-                    </TableCell>
-                    <TableCell align="right">{row.Quantity}</TableCell>
-                    <TableCell align="right">{row.Avg_Cost}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </Grid>
-        <Grid size={9}>
-          <TableContainer component={Paper}>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
-              <TableHead>
-                <TableRow>
-                  <TableCell>Instrument</TableCell>
-                  <TableCell align="right">Quantity</TableCell>
-                  <TableCell align="right">Avg_Cost</TableCell>
-                  <TableCell align="right">Invested</TableCell>
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                {rows.map((row) => (
-                  <TableRow
-                    key={row.Instrument}
-                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                  >
-                    <TableCell component="th" scope="row">
-                      {row.Instrument}
-                    </TableCell>
-                    <TableCell align="right">{row.Quantity}</TableCell>
-                    <TableCell align="right">{row.Avg_Cost}</TableCell>
-                    <TableCell align="right">{row.Invested}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </TableContainer>
-        </Grid>
-      </Grid>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+        </div>
     </>
   );
 }

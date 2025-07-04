@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from'axios';
+import SideBar from "../SideBar/SideBar";
 
 export default function Funds() {
   const res = localStorage.getItem("Response");
@@ -18,6 +19,7 @@ export default function Funds() {
   return (
     <>
       <div>
+        <SideBar/>
         <div><h1>My Funds</h1></div>
         {userData}
         
