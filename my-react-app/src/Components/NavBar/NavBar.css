@@ -5,8 +5,6 @@
 }
 
 .navbar-container {
-  margin-bottom: 500px;
   display: flex;
-  margin-left: 600px;
-  width: 100%;
+  margin: 10px;
 }

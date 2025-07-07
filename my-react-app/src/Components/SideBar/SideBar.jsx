@@ -59,9 +59,9 @@ export default function SideBar() {
       <TableContainer component={Paper}>
         <Table aria-label="simple table">
           <TableHead style={{ marginLeft: "100px" }}>
-            WatchList1
+            
             <TableRow>
-              <TableCell>Default(7)</TableCell>
+              <TableCell>WatchList1 Default(7)</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>

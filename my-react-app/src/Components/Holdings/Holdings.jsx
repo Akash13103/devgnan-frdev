@@ -59,38 +59,42 @@ localStorage.setItem("rows:", rows);
 export default function Holdings() {
   return (
     <>
-    <div className="content">
-      <SideBar/>
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell>Instrument</TableCell>
-                <TableCell align="right">Quantity</TableCell>
-                <TableCell align="right">Avg_Cost</TableCell>
-                <TableCell align="right">Invested</TableCell>
-                <TableCell>Apply If</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow
-                  key={row.Instrument}
-                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                >
-                  <TableCell component="th" scope="row">
-                    {row.Instrument}
-                  </TableCell>
-                  <TableCell align="right">{row.Quantity}</TableCell>
-                  <TableCell align="right">{row.Avg_Cost}</TableCell>
-                  <TableCell align="right">{row.Invested}</TableCell>
-                  <TableCell><Button>Apply</Button></TableCell>
+      <div className="content">
+        <SideBar />
+        <div className="holdingdata">
+          <TableContainer component={Paper}>
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+              <TableHead>
+                <TableRow>
+                  <TableCell>Instrument</TableCell>
+                  <TableCell align="right">Quantity</TableCell>
+                  <TableCell align="right">Avg_Cost</TableCell>
+                  <TableCell align="right">Invested</TableCell>
+                  <TableCell>Apply If</TableCell>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
+              </TableHead>
+              <TableBody>
+                {rows.map((row) => (
+                  <TableRow
+                    key={row.Instrument}
+                    sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                  >
+                    <TableCell component="th" scope="row">
+                      {row.Instrument}
+                    </TableCell>
+                    <TableCell align="right">{row.Quantity}</TableCell>
+                    <TableCell align="right">{row.Avg_Cost}</TableCell>
+                    <TableCell align="right">{row.Invested}</TableCell>
+                    <TableCell>
+                      <Button>Apply</Button>
+                    </TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
         </div>
+      </div>
     </>
   );
 }

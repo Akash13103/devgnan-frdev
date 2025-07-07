@@ -1,9 +1,12 @@
 .content {
   display: flex;
-  gap: 20px;
-  margin-left: 0px;
 }
 .button {
   background-color: #00a1ff;
   color: white;
+}
+.holdingdata {
+  width: 70%;
+  margin: 10px;
+  border: 1px solid gray;
 }

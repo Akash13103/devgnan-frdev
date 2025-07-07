@@ -43,4 +43,6 @@ h2:hover {
 }
 .dashboard-content {
   width: 70%;
+  border: 1px solid grey;
+  margin: 10px;
 }

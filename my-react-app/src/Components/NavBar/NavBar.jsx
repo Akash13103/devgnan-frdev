@@ -1,6 +1,7 @@
 import React from "react";
 import DashBoard from "../DashBoard/DashBoard";
 import { Link } from "react-router-dom";
+import "./NavBar.css";
 function NavBar() {
   return (
     <>
