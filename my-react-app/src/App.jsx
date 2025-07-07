@@ -1,6 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Login from "./Components/Login/Login.jsx";
 import {
@@ -23,7 +21,6 @@ import ZerodhaLogin from "./Components/ZerodhaLogin/ZerodhaLogin.jsx";
 import D2 from './Components/DashBoard/D2.jsx'
 
 function App() {
-  const [count, setCount] = useState(0);
   const location = useLocation();
   console.log("location:", location.pathname);
 
@@ -34,15 +31,12 @@ function App() {
       )}
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/home" element={<NavBar />} />
         <Route path="/dashboard" element={<DashBoard />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/holdings" element={<Holdings />} />
         <Route path="/positions" element={<Positions />} />
         <Route path="/funds" element={<Funds />} />
         <Route path="/bids" element={<Bids />} />
-        <Route path="/zerodha" element={<ZerodhaLogin />} />
-         <Route path="/D2" element={<D2 />} />
       </Routes>
     </>
   );

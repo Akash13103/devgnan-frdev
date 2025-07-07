@@ -29,12 +29,6 @@ function NavBar() {
           <li>
             <Link to="/bids">Bids</Link>
           </li>
-          <li>
-            <Link to="/">Login</Link>
-          </li>
-          <li>
-            <Link to="/D2">D2</Link>
-          </li>
         </ul>
       </div>
     </>

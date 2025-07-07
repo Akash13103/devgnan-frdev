@@ -6,7 +6,7 @@ function Login() {
   const [userName, updateUserName] = useState("Akash");
   const [password, setPassword] = useState("");
   const [successRes, setSuccessRes] = useState("");
-  const navigate = useNavigate("");
+  const navigate = useNavigate();
   function handleUserName(event) {
     console.log("UserName:", event.target.value);
     updateUserName(event.target.value);
@@ -21,8 +21,8 @@ function Login() {
       const url = await axios.post(
         "https://api.escuelajs.co/api/v1/auth/login",
         {
-          email: "john@mail.com",
-          password: "changeme",
+          email: userName,
+          password: password,
         }
       );
       const Response = await url.data.access_token;
@@ -49,6 +49,7 @@ function Login() {
               onChange={handleUserName}
               placeholder="Phone or UserID"
               required
+              value={userName}
             />
             <div className="input-field">Password</div>
             <input
@@ -57,6 +58,7 @@ function Login() {
               onChange={handlePassword}
               placeholder="Password"
               required
+              value={password}
             />
             <button className="login-button" onClick={handleLoginButton}>
               Login

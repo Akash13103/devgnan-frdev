@@ -6,7 +6,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import '../SideBar/SideBar.css'
+import "./SideBar.css";
 const rows = [
   {
     Instrument: "ADANIET",
@@ -58,7 +58,8 @@ export default function SideBar() {
     <div className="sidebar-table">
       <TableContainer component={Paper}>
         <Table aria-label="simple table">
-          <TableHead>WatchList1 
+          <TableHead style={{ marginLeft: "100px" }}>
+            WatchList1
             <TableRow>
               <TableCell>Default(7)</TableCell>
             </TableRow>

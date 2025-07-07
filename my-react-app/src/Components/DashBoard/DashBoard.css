@@ -16,16 +16,18 @@ h2:hover {
 .dashboard-con {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .top-portion {
   display: flex;
   padding-left: 20px;
+  width: 100%;
 }
 .middle-portion {
   display: flex;
-  /* justify-content: space-around; */
-  gap: 734px;
+  justify-content: space-between;
   padding-left: 20px;
+  width: 100%;
 }
 .metrics-info {
   display: flex;
@@ -33,9 +35,12 @@ h2:hover {
 }
 .equidity,
 .comodity {
-  width: 50%;
   color: #000000;
+  width: 50%;
 }
 .sidebar-table {
   width: 30%;
+}
+.dashboard-content {
+  width: 70%;
 }
