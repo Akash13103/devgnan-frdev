@@ -13,4 +13,19 @@ h2:hover {
 .content {
   display: flex;
 }
-
+.main-content {
+  display: flex;
+  justify-content: space-between;
+}
+.middle-portion {
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 734px;
+  padding-left: 20px;
+}
+.metrics,
+.metrics-info {
+  display: flex;
+  padding-left: 20px;
+  justify-content: space-between;
+}
