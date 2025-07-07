@@ -20,6 +20,7 @@ import Positions from "./Components/Positions/Positions.jsx";
 import Funds from "./Components/Funds/Funds.jsx";
 import Bids from "./Components/Bids/Bids.jsx";
 import ZerodhaLogin from "./Components/ZerodhaLogin/ZerodhaLogin.jsx";
+import D2 from './Components/DashBoard/D2.jsx'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -29,36 +30,7 @@ function App() {
   return (
     <>
       {location.pathname === "/" ? null : (
-        <div>
-          <ul className="navbar-container">
-            <li>
-              <Link to="/dashboard">DashBoard</Link>
-            </li>
-
-            <li>
-              <Link to="/orders">Orders</Link>
-            </li>
-
-            <li>
-              <Link to="/holdings">Holdings</Link>
-            </li>
-
-            <li>
-              <Link to="/positions">Positions</Link>
-            </li>
-
-            <li>
-              <Link to="/funds">Funds</Link>
-            </li>
-
-            <li>
-              <Link to="/bids">Bids</Link>
-            </li>
-            <li>
-              <Link to="/">Login</Link>
-            </li>
-          </ul>
-        </div>
+        <NavBar/>
       )}
       <Routes>
         <Route path="/" element={<Login />} />
@@ -70,6 +42,7 @@ function App() {
         <Route path="/funds" element={<Funds />} />
         <Route path="/bids" element={<Bids />} />
         <Route path="/zerodha" element={<ZerodhaLogin />} />
+         <Route path="/D2" element={<D2 />} />
       </Routes>
     </>
   );

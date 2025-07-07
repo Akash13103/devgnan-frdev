@@ -13,9 +13,13 @@ h2:hover {
 .content {
   display: flex;
 }
-.main-content {
+.dashboard-con {
   display: flex;
   justify-content: space-between;
+}
+.top-portion {
+  display: flex;
+  padding-left: 20px;
 }
 .middle-portion {
   display: flex;
@@ -23,9 +27,15 @@ h2:hover {
   gap: 734px;
   padding-left: 20px;
 }
-.metrics,
 .metrics-info {
   display: flex;
   padding-left: 20px;
-  justify-content: space-between;
+}
+.equidity,
+.comodity {
+  width: 50%;
+  color: #000000;
+}
+.sidebar-table {
+  width: 30%;
 }

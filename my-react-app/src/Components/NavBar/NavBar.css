@@ -1,11 +1,12 @@
 .navbar {
-    background-color: whitesmoke;
-    display: flex;
-    gap: 30px;
+  background-color: whitesmoke;
+  display: flex;
+  gap: 30px;
 }
 
 .navbar-container {
-    margin-bottom: 500px;
-    display: flex;
-    margin-left: 600px;
+  margin-bottom: 500px;
+  display: flex;
+  margin-left: 600px;
+  width: 100%;
 }

@@ -1,12 +1,12 @@
+.login-page {
+  margin-left: 500px;
+}
 .login-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 40px;
-}
-.login-container {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 #form-input {

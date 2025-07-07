@@ -17,30 +17,17 @@ export default function DashBoard() {
   return (
     <>
       <div className="dashboard-con">
-        <div className="main-content">
-          <SideBar />
-          <div className="dashboard-content">
-            <div className="top-portion">
-              <p>Hi,Akash!</p>
-            </div>
-            <div className="middle-portion">
-              <div>Equity</div>
-              <div>Commodity</div>
-            </div>
-            <div className="metrics">450.10
-              <div>
-                <div>MARGIN USED:0</div>
-                <div>Opening Balance:450.10</div>
-                <div>View statement</div>
-              </div>
-              <div>0</div>
-            </div>
-            <div className="metrics-info">
-              <div>
-                Margin available
-              </div>
-              <div>Margin available</div>
-            </div>
+        <SideBar />
+        <div className="dashboard-content">
+          <div className="top-portion">
+            <p>Hi,Akash!</p>
+          </div>
+          <div className="middle-portion">
+            <div className="equidity">Equity</div>
+            <div className="comodity">Commodity</div>
+          </div>
+          <div className="metrics-info">
+            <div>Margin available</div>
           </div>
         </div>
       </div>
