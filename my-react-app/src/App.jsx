@@ -18,17 +18,16 @@ import Positions from "./Components/Positions/Positions.jsx";
 import Funds from "./Components/Funds/Funds.jsx";
 import Bids from "./Components/Bids/Bids.jsx";
 import ZerodhaLogin from "./Components/ZerodhaLogin/ZerodhaLogin.jsx";
-import D2 from './Components/DashBoard/D2.jsx'
-
+import D2 from "./Components/DashBoard/D2.jsx";
+import Assignment1 from "./Assignment1.jsx";
+import Assignment2 from "./Assignment2.jsx";
 function App() {
   const location = useLocation();
   console.log("location:", location.pathname);
 
   return (
     <>
-      {location.pathname === "/" ? null : (
-        <NavBar/>
-      )}
+      {location.pathname === "/" ? null : <NavBar />}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<DashBoard />} />
@@ -37,6 +36,8 @@ function App() {
         <Route path="/positions" element={<Positions />} />
         <Route path="/funds" element={<Funds />} />
         <Route path="/bids" element={<Bids />} />
+        <Route path="/a1" element={<Assignment1/>}/>
+        <Route path="/a2" element={<Assignment2/>}/>
       </Routes>
     </>
   );
