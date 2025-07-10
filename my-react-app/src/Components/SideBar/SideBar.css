@@ -1,4 +1,51 @@
 .sidebar-table {
-  width: 30%;
+  width: 100%;
   margin: 10px;
+}
+.sidebar-container {
+  width: 30%;
+  background-color: rgb(255, 255, 255);
+  padding: 25px;
+}
+
+.searchbar {
+  border: 1px solid #323232;
+  padding: 10px 10px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  color: #000000;
+  font-size: 1rem;
+}
+.search-icon-container {
+  width: 10%;
+}
+.search-input {
+  width: 80%;
+  background-color: transparent;
+  border: none;
+  margin-right: 5px;
+  outline: none;
+  color: #fff;
+}
+
+.watchlist-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 18px 0px;
+}
+
+.watchlist-container .watchlist-text {
+  color: #242424;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.watchlist-container .newgroup-text {
+  color: rgb(49, 49, 230);
+  font-size: 13px;
+  letter-spacing: 1px;
 }

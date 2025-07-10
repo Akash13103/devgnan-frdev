@@ -1,8 +1,17 @@
 import React from "react";
 import DashBoard from "../DashBoard/DashBoard";
 import { Link } from "react-router-dom";
+import { CiBellOn } from "react-icons/ci";
+import { CiShoppingCart } from "react-icons/ci";
 import "./NavBar.css";
+import { useNavigate } from "react-router-dom";
 function NavBar() {
+  const accesToken = localStorage.getItem("Response");
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem(accesToken);
+    navigate("/");
+  };
   return (
     <>
       <div>
@@ -30,9 +39,20 @@ function NavBar() {
           <li>
             <Link to="/bids">Bids</Link>
           </li>
+
+          <div className="icons">
+            <CiBellOn/>
+            <CiShoppingCart />
+          </div>
+          <li>
+            <button type="submit" className="login-btn" onClick={handleLogout}>
+              Login
+            </button>
+          </li>
         </ul>
       </div>
     </>
   );
 }
+
 export default NavBar;

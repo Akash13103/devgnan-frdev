@@ -7,4 +7,26 @@
 .navbar-container {
   display: flex;
   margin: 10px;
+  align-items: center;
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+}
+.login-btn {
+  background-color: #fc6334;
+  padding: 5px 15px;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+  color:#fc6334
+}
+a:hover{
+  color:#952908;
 }
