@@ -21,6 +21,7 @@ import ZerodhaLogin from "./Components/ZerodhaLogin/ZerodhaLogin.jsx";
 import D2 from "./Components/DashBoard/D2.jsx";
 import Assignment1 from "./Assignment1.jsx";
 import Assignment2 from "./Assignment2.jsx";
+import Assignment3 from "./Assignment3.jsx";
 function App() {
   const location = useLocation();
   console.log("location:", location.pathname);
@@ -38,6 +39,7 @@ function App() {
         <Route path="/bids" element={<Bids />} />
         <Route path="/a1" element={<Assignment1/>}/>
         <Route path="/a2" element={<Assignment2/>}/>
+        <Route path="/a3" element={<Assignment3/>}/>
       </Routes>
     </>
   );
