@@ -35,7 +35,11 @@ export default function Assignment2() {
       if (email === "john@mail.com" && password === "changeme") {
         const token = url.data.access_token;
         localStorage.setItem("Token", token);
-        setUser(url.data);
+        setUser({
+          name: "Akash",
+          email: email,
+        });
+        console.log(user);
         setEmail("");
         setPassword("");
       } else {
