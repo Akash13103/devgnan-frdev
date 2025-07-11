@@ -1,12 +1,16 @@
 import React from "react";
 import { useState } from "react";
+import axios from "axios";
 
 export default function Assignment3() {
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
   const [user, setUser] = useState(null);
   const [token, setToken] = useState(null);
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const jwtToken = localStorage.getItem("Token");
   function handleUserName(event) {
     console.log("UserName:", event.target.value);
     setEmail(event.target.value);
@@ -33,12 +37,9 @@ export default function Assignment3() {
       //console.log(result);
       if (email === "john@mail.com" && password === "changeme") {
         const token = url.data.access_token;
+        console.log(token);
         localStorage.setItem("Token", token);
-        setUser();
-        console.log(user);
-        setEmail("");
-        setPassword("");
-        getProfile(url);
+        getProfile(token);
       } else {
         console.log("❌invalid user");
         //console.log(result);
@@ -51,10 +52,8 @@ export default function Assignment3() {
       // TODO: Show success message with token
       // TODO: Show error message if login fails
     } catch (error) {
-      setResult("❌ Error: " + error.message);
+      alert("❌ Error: " + error.message);
     }
-
-    setLoading(false);
   };
 
   const getProfile = async () => {
@@ -75,7 +74,7 @@ export default function Assignment3() {
       const token = await axios.get(
         "https://api.escuelajs.co/api/v1/auth/profile",
         {
-          Headers: { Authorisation: `Bearer ${token}` },
+          Headers: { Authorization: `$Bearer ${jwtToken}` },
         }
       );
       setProfile(token);
@@ -84,6 +83,19 @@ export default function Assignment3() {
     }
 
     setLoading(false);
+  };
+  const checkSavedLogin = () => {
+    // TODO: Get token from localStorage
+    const jwtToken = localStorage.getItem("Token");
+    if (jwtToken) {
+      setUser({ Token: jwtToken });
+      setToken(jwtToken);
+      console.log(jwtToken);
+    } else {
+      alert("Not Found!");
+    }
+    // TODO: If found, set user and token states
+    // TODO: If not found, show alert
   };
 
   const handleLogout = () => {
