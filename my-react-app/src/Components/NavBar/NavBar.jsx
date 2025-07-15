@@ -12,6 +12,9 @@ function NavBar() {
     localStorage.removeItem(accesToken);
     navigate("/");
   };
+  function logoutHandle() {
+    localStorage.removeItem("Response");
+  }
   return (
     <>
       <div>
@@ -39,9 +42,10 @@ function NavBar() {
           <li>
             <Link to="/bids">Bids</Link>
           </li>
+          <li onClick={logoutHandle}>Logout</li>
 
           <div className="icons">
-            <CiBellOn/>
+            <CiBellOn />
             <CiShoppingCart />
           </div>
           <li>

@@ -22,6 +22,7 @@ import D2 from "./Components/DashBoard/D2.jsx";
 import Assignment1 from "./Assignment1.jsx";
 import Assignment2 from "./Assignment2.jsx";
 import Assignment3 from "./Assignment3.jsx";
+import ProtectedRoutes from "./Components/ProtectedRoutes/ProtectedRoutes.jsx";
 function App() {
   const location = useLocation();
   console.log("location:", location.pathname);
@@ -31,15 +32,57 @@ function App() {
       {location.pathname === "/" ? null : <NavBar />}
       <Routes>
         <Route path="/" element={<Login />} />
-        <Route path="/dashboard" element={<DashBoard />} />
-        <Route path="/orders" element={<Orders />} />
-        <Route path="/holdings" element={<Holdings />} />
-        <Route path="/positions" element={<Positions />} />
-        <Route path="/funds" element={<Funds />} />
-        <Route path="/bids" element={<Bids />} />
-        <Route path="/a1" element={<Assignment1/>}/>
-        <Route path="/a2" element={<Assignment2/>}/>
-        <Route path="/a3" element={<Assignment3/>}/>
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoutes>
+              <DashBoard />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/orders"
+          element={
+            <ProtectedRoutes>
+              <Orders />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/holdings"
+          element={
+            <ProtectedRoutes>
+              <Holdings />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/positions"
+          element={
+            <ProtectedRoutes>
+              <Positions />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/funds"
+          element={
+            <ProtectedRoutes>
+              <Funds />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/bids"
+          element={
+            <ProtectedRoutes>
+              <Bids />
+            </ProtectedRoutes>
+          }
+        />
+        <Route path="/a1" element={<Assignment1 />} />
+        <Route path="/a2" element={<Assignment2 />} />
+        <Route path="/a3" element={<Assignment3 />} />
       </Routes>
     </>
   );
