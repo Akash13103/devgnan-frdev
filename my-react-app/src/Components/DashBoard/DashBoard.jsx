@@ -60,17 +60,55 @@ export default function DashBoard() {
   return (
     <>
       <div className="dashboard-con">
-        <SideBar/>
+        <SideBar />
         <div className="dashboard-content">
           <div className="top-portion">
             <p>Hi,Akash!</p>
           </div>
           <div className="middle-portion">
-            <div className="equidity">Equity</div>
-            <div className="comodity">Commodity</div>
+            <div className="equidity">
+              <div>Equity</div>
+              <div className="value">450.4</div>
+              <div>Margin Available</div>
+            </div>
+            <div>
+              <div>Margins Used : 0</div>
+              <div>Opening Balance : 450.4</div>
+              <div>
+                <a href="">View Statement</a>
+              </div>
+            </div>
+            <div className="comodity">
+              <div>Commodity</div>
+              <div className="value">0</div>
+              <div>Margin Available</div>
+            </div>
+            <div>
+              <div>Margins Used : 0</div>
+              <div>Opening Balance : 450.4</div>
+              <div>
+                <a href="">View Statement</a>
+              </div>
+            </div>
           </div>
+
           <div className="metrics-info">
-            <div>Margin available</div>
+            <div className="value">
+              54.95k
+              <div className="valueinfo">
+                Current value
+                <div>4.52L</div>
+              </div>
+            </div>
+            <div className="value1">
+              <div className="v">
+                +13.85%
+                <div className="value-info1">
+                  Investment
+                  <div>3.97L</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
