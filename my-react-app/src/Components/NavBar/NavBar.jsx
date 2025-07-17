@@ -17,7 +17,7 @@ function NavBar() {
   }
   return (
     <>
-      <div>
+      <div className="navbar">
         <ul className="navbar-container">
           <li>
             <Link to="/dashboard">DashBoard</Link>

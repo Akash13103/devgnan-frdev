@@ -71,7 +71,7 @@ export default function DashBoard() {
               <div className="value">450.4</div>
               <div>Margin Available</div>
             </div>
-            <div>
+            <div className="metrics">
               <div>Margins Used : 0</div>
               <div>Opening Balance : 450.4</div>
               <div>
@@ -83,7 +83,7 @@ export default function DashBoard() {
               <div className="value">0</div>
               <div>Margin Available</div>
             </div>
-            <div>
+            <div className="metrics">
               <div>Margins Used : 0</div>
               <div>Opening Balance : 450.4</div>
               <div>

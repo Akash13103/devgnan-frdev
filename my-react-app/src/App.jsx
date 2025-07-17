@@ -9,6 +9,8 @@ import {
   Link,
 } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar.jsx";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
 import "./Components/Login/Login.css";
 import "./Components/DashBoard/DashBoard.css";
 import DashBoard from "./Components/DashBoard/DashBoard.jsx";
@@ -22,7 +24,9 @@ import D2 from "./Components/DashBoard/D2.jsx";
 import Assignment1 from "./Assignment1.jsx";
 import Assignment2 from "./Assignment2.jsx";
 import Assignment3 from "./Assignment3.jsx";
+import AsianPaintsChart from "./Components/AsianPaintsChart/AsianPaintsChart.jsx";
 import ProtectedRoutes from "./Components/ProtectedRoutes/ProtectedRoutes.jsx";
+import Counter from "./Components/Counter/Counter.jsx";
 function App() {
   const location = useLocation();
   console.log("location:", location.pathname);
@@ -30,60 +34,64 @@ function App() {
   return (
     <>
       {location.pathname === "/" ? null : <NavBar />}
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route
-          path="/dashboard"
-          element={
-            <ProtectedRoutes>
-              <DashBoard />
-            </ProtectedRoutes>
-          }
-        />
-        <Route
-          path="/orders"
-          element={
-            <ProtectedRoutes>
-              <Orders />
-            </ProtectedRoutes>
-          }
-        />
-        <Route
-          path="/holdings"
-          element={
-            <ProtectedRoutes>
-              <Holdings />
-            </ProtectedRoutes>
-          }
-        />
-        <Route
-          path="/positions"
-          element={
-            <ProtectedRoutes>
-              <Positions />
-            </ProtectedRoutes>
-          }
-        />
-        <Route
-          path="/funds"
-          element={
-            <ProtectedRoutes>
-              <Funds />
-            </ProtectedRoutes>
-          }
-        />
-        <Route
-          path="/bids"
-          element={
-            <ProtectedRoutes>
-              <Bids />
-            </ProtectedRoutes>
-          }
-        />
-        <Route path="/a1" element={<Assignment1 />} />
-        <Route path="/a2" element={<Assignment2 />} />
-        <Route path="/a3" element={<Assignment3 />} />
-      </Routes>
+      <Provider store={store}>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoutes>
+                <DashBoard />
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="/orders"
+            element={
+              <ProtectedRoutes>
+                <Orders />
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="/holdings"
+            element={
+              <ProtectedRoutes>
+                <Holdings />
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="/positions"
+            element={
+              <ProtectedRoutes>
+                <Positions />
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="/funds"
+            element={
+              <ProtectedRoutes>
+                <Funds />
+              </ProtectedRoutes>
+            }
+          />
+          <Route
+            path="/bids"
+            element={
+              <ProtectedRoutes>
+                <Bids />
+              </ProtectedRoutes>
+            }
+          />
+          <Route path="/a1" element={<Assignment1 />} />
+          <Route path="/a2" element={<Assignment2 />} />
+          <Route path="/a3" element={<Assignment3 />} />
+          <Route path="/sb" element={<AsianPaintsChart />} />
+          <Route path="/s" element={<Counter />} />
+        </Routes>
+      </Provider>
     </>
   );
 }
