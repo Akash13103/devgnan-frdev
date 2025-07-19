@@ -27,6 +27,7 @@ import Assignment3 from "./Assignment3.jsx";
 import AsianPaintsChart from "./Components/AsianPaintsChart/AsianPaintsChart.jsx";
 import ProtectedRoutes from "./Components/ProtectedRoutes/ProtectedRoutes.jsx";
 import Counter from "./Components/Counter/Counter.jsx";
+import DataUpdation from "./Components/DataUpdation/DataUpdation.jsx";
 function App() {
   const location = useLocation();
   console.log("location:", location.pathname);
@@ -89,7 +90,7 @@ function App() {
           <Route path="/a2" element={<Assignment2 />} />
           <Route path="/a3" element={<Assignment3 />} />
           <Route path="/sb" element={<AsianPaintsChart />} />
-          <Route path="/s" element={<Counter />} />
+          <Route path="/s" element={<DataUpdation />} />
         </Routes>
       </Provider>
     </>
