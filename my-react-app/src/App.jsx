@@ -10,7 +10,7 @@ import {
 } from "react-router-dom";
 import NavBar from "./Components/NavBar/NavBar.jsx";
 import { Provider } from "react-redux";
-import { store } from "./redux/store";
+import { store } from "./Redux/store";
 import "./Components/Login/Login.css";
 import "./Components/DashBoard/DashBoard.css";
 import DashBoard from "./Components/DashBoard/DashBoard.jsx";
@@ -90,7 +90,7 @@ function App() {
           <Route path="/a2" element={<Assignment2 />} />
           <Route path="/a3" element={<Assignment3 />} />
           <Route path="/sb" element={<AsianPaintsChart />} />
-          <Route path="/s" element={<DataUpdation />} />
+          <Route path="/s" element={<Counter />} />
         </Routes>
       </Provider>
     </>
