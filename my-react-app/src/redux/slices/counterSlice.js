@@ -9,7 +9,7 @@ export const counterSlice = createSlice({
     handleIncrement: (state, action) => {
       // TODO: Add 1 to state.value
       state.count += 1;
-      console.log("Payload",action.payload);
+      console.log("Payload", action.payload);
     },
 
     // TODO: Create decrement function

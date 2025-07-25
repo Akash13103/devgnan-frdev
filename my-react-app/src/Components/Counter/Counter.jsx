@@ -38,21 +38,16 @@ export default function Counter() {
   console.log("counttt", count);
   const [inputValue, setInputValue] = useState("");
   // state
-  const incrementValue = 20;
-  const decrementValue = 30;
   const dispatch = useDispatch();
 
   // signal useDispatch()
 
   function handleInputChange(e) {
-    console.log("setInputValue", setInputValue(e.target.value)); // this will update input correctly
-    Increment();
+    setInputValue(e.target.value); // this will update input correctly
   }
 
   function Increment(event) {
     debugger;
-    const inputValue = event.target.value;
-    console.log(inputValue);
 
     dispatch(handleIncrement(Number(inputValue)));
 
@@ -65,13 +60,19 @@ export default function Counter() {
 
   function Reset() {
     dispatch(reset(0));
+    setInputValue(0);
   }
   return (
     <>
       <div>Counter {count}</div>
       <button onClick={(event) => Increment}>Increment</button>
       <button onClick={Decrement}>Decrement</button>
-      <input type="number" onChange={Increment} /> Increment value enter
+      <input
+        type="number"
+        onChange={handleInputChange}
+        value={inputValue}
+      />{" "}
+      Increment value enter
       <button onClick={Reset}>Reset</button>
       {/* <button onClick={handleInputChange}>InpChange</button> */}
     </>
