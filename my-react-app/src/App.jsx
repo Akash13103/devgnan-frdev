@@ -19,7 +19,6 @@ import Holdings from "./Components/Holdings/Holdings.jsx";
 import Positions from "./Components/Positions/Positions.jsx";
 import Funds from "./Components/Funds/Funds.jsx";
 import Bids from "./Components/Bids/Bids.jsx";
-import ZerodhaLogin from "./Components/ZerodhaLogin/ZerodhaLogin.jsx";
 import Assignment1 from "./Assignment1.jsx";
 import Assignment2 from "./Assignment2.jsx";
 import Assignment3 from "./Assignment3.jsx";

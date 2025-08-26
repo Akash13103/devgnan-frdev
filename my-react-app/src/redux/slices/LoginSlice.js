@@ -10,7 +10,7 @@ export const handleAuth = createAsyncThunk(
         password: password,
       }
     );
-    return response;
+    return response.data;
   }
 );
 export const LoginSlice = createSlice({
