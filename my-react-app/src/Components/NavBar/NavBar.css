@@ -29,3 +29,11 @@ a {
 a:hover {
   color: #952908;
 }
+.dbbtn:active {
+  background-color: lightgray;
+  transform: scale(0.98);
+}
+.dbbtn:active::after {
+  width: 100%;
+  background-color: #ff6600;
+}

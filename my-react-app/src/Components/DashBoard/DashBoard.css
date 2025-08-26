@@ -33,6 +33,7 @@ h2:hover {
   justify-content: space-between;
   padding: 20px;
   width: 100%;
+  font-size: small;
 }
 .metrics-info {
   display: flex;
@@ -43,6 +44,7 @@ h2:hover {
 .comodity {
   color: #000000;
   width: 25%;
+  border-right: 1px solid black;
 }
 .sidebar-table {
   width: 100%;
@@ -51,16 +53,18 @@ h2:hover {
   width: 70%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 10px;
+  padding: 20px;
 }
 .equidity .value,
 .comodity .value {
   font-size: xxx-large;
 }
 .metrics-info .value {
-  font-size: x-large;
   display: flex;
   justify-content: space-between;
   width: 70%;
+  padding: 20px;
+  padding-left: 0px;
 }
 .metrics-info .value1 {
   font-size: x-small;
@@ -68,20 +72,51 @@ h2:hover {
 .metrics-info .valueinfo {
   font-size: small;
 }
-.value1 .v {
-  font-size: x-small;
-  display: flex;
-  justify-content: space-between;
-  width: 70%;
-}
-.value-info1 {
-  font-size: small;
-  display: flex;
-  flex-direction: column;
-  padding-right: 12px;
-}
 .middle-portion .metrics {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+.headings .header2 {
+  margin-left: auto;
+  margin-right: 264px;
+  display: flex;
+  align-items: anchor-center;
+  gap: 1px;
+}
+.headings {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  gap: 1px;
+  align-items: anchor-center;
+}
+.metrics-info .head {
+  display: flex;
+  align-items: anchor-center;
+  gap: 1px;
+  border-top: 1px solid;
+  padding: 20px;
+  padding-left: 0px;
+}
+.value .v {
+  font-size: x-small;
+  margin-right: auto;
+  margin-top: 41px;
+  margin-left: 5px;
+  color: green;
+}
+.valueinfo {
+  display: flex;
+  flex-direction: column;
+}
+.value {
+  align-items: anchor-center;
+}
+.value .amount {
+  font-size: xxx-large;
+  color: green;
+}
+.metrics a {
+  color: blue;
 }

@@ -12,6 +12,10 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import Holdings from "../Holdings/Holdings.jsx";
 import SideBar from "../SideBar/SideBar.jsx";
+import { RiPieChartLine } from "react-icons/ri";
+import { FiDroplet } from "react-icons/fi";
+import { PiSuitcase } from "react-icons/pi";
+
 const rows = [
   {
     Instrument: "ADANIET",
@@ -65,9 +69,16 @@ export default function DashBoard() {
           <div className="top-portion">
             <p>Hi,Akash!</p>
           </div>
+          <div className="headings">
+            <RiPieChartLine />
+            <div>Equity</div>
+            <div className="header2">
+              <FiDroplet />
+              Commodity
+            </div>
+          </div>
           <div className="middle-portion">
             <div className="equidity">
-              <div>Equity</div>
               <div className="value">450.4</div>
               <div>Margin Available</div>
             </div>
@@ -79,7 +90,6 @@ export default function DashBoard() {
               </div>
             </div>
             <div className="comodity">
-              <div>Commodity</div>
               <div className="value">0</div>
               <div>Margin Available</div>
             </div>
@@ -93,19 +103,17 @@ export default function DashBoard() {
           </div>
 
           <div className="metrics-info">
-            <div className="value">
-              54.95k
-              <div className="valueinfo">
-                Current value
-                <div>4.52L</div>
-              </div>
+            <div className="head">
+              <PiSuitcase />
+              Holdings(26)
             </div>
-            <div className="value1">
-              <div className="v">
-                +13.85%
+            <div className="value">
+              <div className="amount">54.95k</div>
+              <div className="v">+13.85%</div>
+              <div className="valueinfo">
+                Current value 4.52L
                 <div className="value-info1">
-                  Investment
-                  <div>3.97L</div>
+                  Investment 3.97L
                 </div>
               </div>
             </div>

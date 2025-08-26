@@ -1,0 +1,13 @@
+.addressButton {
+  width: max-content;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: 20px;
+  background-color: white;
+  border: 1px solid #f9002b;
+  font-size: small;
+  padding: 10px;
+  color: #f9002b;
+  font-family: math;
+}

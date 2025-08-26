@@ -20,14 +20,12 @@ import Positions from "./Components/Positions/Positions.jsx";
 import Funds from "./Components/Funds/Funds.jsx";
 import Bids from "./Components/Bids/Bids.jsx";
 import ZerodhaLogin from "./Components/ZerodhaLogin/ZerodhaLogin.jsx";
-import D2 from "./Components/DashBoard/D2.jsx";
 import Assignment1 from "./Assignment1.jsx";
 import Assignment2 from "./Assignment2.jsx";
 import Assignment3 from "./Assignment3.jsx";
 import AsianPaintsChart from "./Components/AsianPaintsChart/AsianPaintsChart.jsx";
 import ProtectedRoutes from "./Components/ProtectedRoutes/ProtectedRoutes.jsx";
 import Counter from "./Components/Counter/Counter.jsx";
-import DataUpdation from "./Components/DataUpdation/DataUpdation.jsx";
 function App() {
   const location = useLocation();
   console.log("location:", location.pathname);

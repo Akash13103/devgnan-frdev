@@ -20,9 +20,8 @@ function NavBar() {
       <div className="navbar">
         <ul className="navbar-container">
           <li>
-            <Link to="/dashboard">DashBoard</Link>
+            <div className="dbbtn"><Link to="/dashboard">DashBoard</Link></div> 
           </li>
-
           <li>
             <Link to="/orders">Orders</Link>
           </li>
